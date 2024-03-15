@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["remix", "chakra-ui", "scaffold", "cli", "react", "template processing", "project setup", "commander"],
   "author": "",
   "license": "ISC",
   "bin": {
