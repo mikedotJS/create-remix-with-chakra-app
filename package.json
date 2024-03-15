@@ -1,0 +1,18 @@
+{
+  "name": "@weirdscience/create-remix-with-chakra-app",
+  "version": "1.0.0",
+  "description": "A CLI tool to scaffold a Remix app integrated with Chakra UI, streamlining the setup process for a modern React-based project.",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "create-remix-with-chakra-app": "./cli.js"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  }
+}
