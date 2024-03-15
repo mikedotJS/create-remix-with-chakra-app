@@ -1,7 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { withEmotionCache } from "@emotion/react";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { theme as proTheme } from "@chakra-ui/pro-theme";
+{{#if isPro}}
+import { theme } from "@chakra-ui/pro-theme";
+{{else}}
+import { theme } from "@chakra-ui/theme";
+{{/if}}
 import {
   Links,
   LiveReload,
@@ -10,7 +14,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { MetaFunction, LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
+import { MetaFunction, LinksFunction } from "@remix-run/node";
 
 import { ServerStyleContext, ClientStyleContext } from "./context";
 
@@ -88,16 +92,16 @@ const Document = withEmotionCache(
   }
 );
 
-const _proTheme = extendTheme(proTheme);
+const _theme = extendTheme(theme);
 const extension = {
-  colors: { ..._proTheme.colors, brand: _proTheme.colors.teal },
+  colors: { ..._theme.colors, brand: _theme.colors.teal },
 };
-const theme = extendTheme(extension, _proTheme);
+const extendedTheme = extendTheme(extension, theme);
 
 export default function App() {
   return (
     <Document>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={extendedTheme}>
         <Outlet />
       </ChakraProvider>
     </Document>

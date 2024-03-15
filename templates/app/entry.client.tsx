@@ -24,8 +24,8 @@ function ClientCacheProvider({ children }: ClientCacheProviderProps) {
   );
 }
 
-const container = document.getElementById("root"); // Ensure you have a div with id 'root' in your index.html
-const root = createRoot(container!); // Non-null assertion operator, assuming 'container' is not null
+const container = document.getElementById("root");
+const root = createRoot(container!);
 root.render(
   <ClientCacheProvider>
     <RemixBrowser />

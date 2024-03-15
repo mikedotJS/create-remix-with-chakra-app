@@ -28,12 +28,14 @@ The CLI performs the following actions:
 2. Sets up a basic project structure for a Remix app with Chakra UI integration.
 3. Copies template files and directories from the CLI's `templates` directory into the new project, replacing placeholders with your project's specific information.
 4. Installs dependencies necessary for the Remix app to run.
+5. If the `--pro` flag is used, it sets up the project with Chakra UI Pro theme.
 
 ## Features
 
 - **Easy Setup**: Quickly scaffold a new Remix app with Chakra UI integration.
 - **Customizable Templates**: The CLI uses templates for project files, which can be customized to suit your needs.
 - **Recursive File Processing**: Processes files and directories recursively, ensuring that your project structure is set up correctly.
+- **Pro Theme Option**: Option to use Chakra UI Pro theme for advanced styling.
 
 ## Dependencies
 
